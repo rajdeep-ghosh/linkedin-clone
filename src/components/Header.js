@@ -1,7 +1,7 @@
 import "../styles/Header.css";
 import HeaderOption from "./HeaderOption";
 import LinkedinLogo from "../images/linkedin-logo.png";
-import { BusinessCenter, Chat, Home, Notifications, Search, SupervisorAccount } from "@material-ui/icons";
+import { BusinessCenter, Chat, GridOnRounded, Home, Notifications, Search, SupervisorAccount } from "@material-ui/icons";
 import avatardemo from "../images/avatar-demo.png";
 
 function Header() {
@@ -21,6 +21,8 @@ function Header() {
         <HeaderOption title="Jobs" Icon={BusinessCenter} />
         <HeaderOption title="Notifications" Icon={Notifications} />
         <HeaderOption title="Me" avatar={avatardemo} />
+        <div className="header__divider"></div>
+        <HeaderOption title="Work" Icon={GridOnRounded} />
       </div>
     </header>
   );

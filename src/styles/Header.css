@@ -39,3 +39,8 @@
 .header__right {
   display: flex;
 }
+
+.header__divider {
+  border-right: 0.1px solid lightgray;
+  margin-right: 20px;
+}
