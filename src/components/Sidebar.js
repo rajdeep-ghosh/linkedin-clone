@@ -1,12 +1,15 @@
 import "../styles/Sidebar.css";
 import { Avatar } from "@material-ui/core";
+import Animal from "react-animals";
 
 function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
         <img src="" alt="" />
-        <Avatar className="sidebar__avatar" />
+        <Avatar className="sidebar__avatar">
+          <Animal size="40px" />
+        </Avatar>
         <h2>Rajdeep Ghosh</h2>
         <h4>rajdeepghosh@gmail.com</h4>
       </div>
