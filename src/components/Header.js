@@ -18,8 +18,8 @@ function Header() {
         <HeaderOption title="Home" Icon={Home} />
         <HeaderOption title="My Network" Icon={SupervisorAccount} />
         <HeaderOption title="Messaging" Icon={Chat} />
-        <HeaderOption title="Jobs" Icon={BusinessCenter} />
         <HeaderOption title="Notifications" Icon={Notifications} />
+        <HeaderOption title="Jobs" Icon={BusinessCenter} />
         <HeaderOption title="Me" avatar={avatardemo} />
         <div className="header__divider"></div>
         <HeaderOption title="Work" Icon={GridOnRounded} />
