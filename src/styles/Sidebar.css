@@ -67,3 +67,36 @@
   font-weight: bold;
   color: #0a66c2 !important;
 }
+
+.sidebar__bottom {
+  text-align: left;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.sidebar__bottom > p {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.sidebar__recentItem {
+  display: flex;
+  font-size: 14px;
+  color: gray;
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.sidebar__recentItem:hover {
+  color: black;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.sidebar__hash {
+  margin: 0 10px 0 5px;
+}
