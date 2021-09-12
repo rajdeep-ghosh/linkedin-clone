@@ -31,3 +31,39 @@
 .sidebar__avatar {
   margin-bottom: 10px;
 }
+
+.sidebar__top > h2 {
+  font-size: 18px;
+}
+
+.sidebar__top > h4 {
+  font-size: 13px;
+  color: gray;
+  padding: 2px 10px;
+}
+
+.sidebar__stats {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sidebar__stat {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.sidebar__stat > p {
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sidebar__statNumber {
+  font-weight: bold;
+  color: #0a66c2 !important;
+}
