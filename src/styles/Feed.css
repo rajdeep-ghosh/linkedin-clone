@@ -21,6 +21,11 @@
   color: gray;
 }
 
+.feed__input:focus-within {
+  border-color: #355ae4;
+  border-width: 2px;
+}
+
 .feed__input > form {
   display: flex;
   align-items: center;
