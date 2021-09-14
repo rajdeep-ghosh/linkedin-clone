@@ -1,0 +1,17 @@
+.feed__inputOption {
+  display: flex;
+  align-items: center;
+  color: gray;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.feed__inputOption:hover {
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.feed__inputOption > h4 {
+  margin-left: 5px;
+}
