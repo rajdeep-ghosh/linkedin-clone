@@ -7,6 +7,7 @@ import {
   Subscriptions 
 } from "@material-ui/icons";
 import FeedInputOption from "./FeedInputOption";
+import Post from "./Post";
 
 function Feed() {
   return (
@@ -28,6 +29,7 @@ function Feed() {
       </div>
 
       {/* Posts */}
+      <Post name="Rajdeep Ghosh" desc="Description" caption="Post caption" />
       
     </div>
   );
