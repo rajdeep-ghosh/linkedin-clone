@@ -17,7 +17,7 @@ function Sidebar() {
       <div className="sidebar__top">
         <img
           src="https://images.unsplash.com/photo-1627844642677-8b30cb8fc636?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-          alt="profile card bg"
+          alt="sidebar-profile-card-bg-img"
         />
         <Avatar className="sidebar__avatar">
           <Animal size="40px" />
