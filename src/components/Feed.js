@@ -30,6 +30,7 @@ function Feed() {
 
       {/* Posts */}
       <Post name="Rajdeep Ghosh" desc="Description" caption="Post caption" />
+      <Post name="Rajdeep Ghosh" desc="Description" caption="Post caption 2" />
       
     </div>
   );
