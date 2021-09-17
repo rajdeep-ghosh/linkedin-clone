@@ -1,4 +1,5 @@
 import "../styles/Feed.css";
+import { useState } from "react";
 import { 
   CalendarViewDay, 
   Create, 
@@ -10,6 +11,8 @@ import FeedInputOption from "./FeedInputOption";
 import Post from "./Post";
 
 function Feed() {
+  const [posts, setPosts] = useState([]);
+
   return (
     <div className="feed">
       <div className="feed__inputContainer">
@@ -31,6 +34,10 @@ function Feed() {
       {/* Posts */}
       <Post name="Rajdeep Ghosh" desc="Description" caption="Post caption" />
       <Post name="Rajdeep Ghosh" desc="Description" caption="Post caption 2" />
+
+      {posts.map(post => {
+        return <Post />;
+      })}
       
     </div>
   );
