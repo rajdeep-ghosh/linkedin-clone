@@ -1,17 +1,45 @@
 import "../styles/Feed.css";
-import { useState } from "react";
-import { 
-  CalendarViewDay, 
-  Create, 
-  EventNote, 
-  Image, 
-  Subscriptions 
+import { useEffect, useState } from "react";
+import firebase from "firebase";
+import {
+  CalendarViewDay,
+  Create,
+  EventNote,
+  Image,
+  Subscriptions,
 } from "@material-ui/icons";
 import FeedInputOption from "./FeedInputOption";
 import Post from "./Post";
+import { db } from "../services/firebase";
 
 function Feed() {
+  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts").orderBy("timestamp", "desc").onSnapshot((snapshot) => {
+      setPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      );
+    });
+  }, []);
+
+  function sendPost(e) {
+    e.preventDefault();
+
+    db.collection("posts").add({
+      name: "Rajdeep Ghosh",
+      desc: "SDE III @ Google",
+      caption: input,
+      dpURL: "",
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+
+    setInput("");
+  }
 
   return (
     <div className="feed">
@@ -19,8 +47,8 @@ function Feed() {
         <div className="feed__input">
           <Create />
           <form>
-            <input type="text"></input>
-            <button type="submit">Post</button>
+            <input onChange={(e) => {setInput(e.target.value)}} value={input} type="text"></input>
+            <button onClick={sendPost} type="submit">Post</button>
           </form>
         </div>
         <div className="feed__inputOptions">
@@ -32,13 +60,18 @@ function Feed() {
       </div>
 
       {/* Posts */}
-      <Post name="Rajdeep Ghosh" desc="Description" caption="Post caption" />
-      <Post name="Rajdeep Ghosh" desc="Description" caption="Post caption 2" />
-
-      {posts.map(post => {
-        return <Post />;
+      {posts.map((post) => {
+        return (
+          <Post 
+            key={post.id} 
+            name={post.data.name} 
+            desc={post.data.desc} 
+            caption={post.data.caption} 
+            dpURL={post.data.dpURL} 
+          />
+        );
       })}
-      
+
     </div>
   );
 }
