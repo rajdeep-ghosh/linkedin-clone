@@ -1,0 +1,14 @@
+.login__header {
+  padding: 20px;
+}
+
+.login__header > a > img {
+  object-fit: contain;
+  width: 150px;
+}
+
+@media (max-width: 1000px) {
+  .login__header > a > img {
+    width: 100px;
+  }
+}
