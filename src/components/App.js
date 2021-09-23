@@ -1,6 +1,6 @@
 import "../styles/App.css";
 import { useSelector } from "react-redux";
-import { user as selectUser } from "../features/userSlice";
+import { selectUser } from "../features/userSlice";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
@@ -14,14 +14,14 @@ function App() {
       {!user ? (
         <Login />
       ) : (
-        <div>
+        <>
           <Header />
           <div className="app__body">
             <Sidebar />
             <Feed />
             {/* Widgets */}
           </div>
-        </div>
+        </>
       )}
     </div>
   );
