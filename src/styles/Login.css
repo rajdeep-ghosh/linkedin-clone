@@ -1,5 +1,5 @@
-.login__header {
-  padding: 20px;
+.login {
+  padding: 20px 200px;
 }
 
 .login__header > a > img {
@@ -7,7 +7,67 @@
   width: 150px;
 }
 
+.login__body {
+  margin-top: 50px;
+}
+
+.login__title {
+  font-size: 55px;
+  font-weight: 300;
+  color: #8f5849;
+  max-width: 600px;
+  line-height: 68px;
+}
+
+.login__form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__form > input {
+  width: 32%;
+  padding: 14px 10px;
+  font-size: 16px;
+  margin-bottom: 13px;
+  outline: none;
+}
+
+.login__form > input:focus {
+  border: 2px solid #0a66c2;
+}
+
+.login__form > button {
+  width: 34%;
+  padding: 18px 10px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background-color: #0a66c2;
+  color: white;
+  margin-bottom: 13px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.login__form > button:hover {
+  background-color: #004182;
+}
+
+.login__register {
+  color: #666666;
+}
+
+.login__register > span {
+  cursor: pointer;
+  color: #0a66c2;
+}
+
 @media (max-width: 1000px) {
+  .login {
+    padding: 20px;
+  }
+
   .login__header > a > img {
     width: 100px;
   }
