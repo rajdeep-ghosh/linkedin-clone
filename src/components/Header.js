@@ -23,6 +23,7 @@ function Header() {
         <HeaderOption title="Me" avatar={avatardemo} />
         <div className="header__divider"></div>
         <HeaderOption title="Work" Icon={GridOnRounded} />
+        <button className="header__logoutBtn">Log out</button>
       </div>
     </header>
   );

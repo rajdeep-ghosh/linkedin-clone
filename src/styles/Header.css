@@ -49,3 +49,15 @@
   border-right: 0.1px solid lightgray;
   margin-right: 20px;
 }
+
+.header__logoutBtn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  width: 70px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}

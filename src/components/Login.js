@@ -27,7 +27,7 @@ function Login() {
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
                 displayName: name,
-                photoURL: dp,
+                dpURL: dp,
               })
             );
           });
