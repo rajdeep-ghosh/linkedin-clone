@@ -2,11 +2,14 @@
   flex: 0.2;
   position: sticky;
   top: 80px;
+  height: fit-content;
+  padding-bottom: 10px;
+}
+
+.widget__info {
   border: 1px solid lightgray;
   border-radius: 10px;
   background-color: white;
-  height: fit-content;
-  padding-bottom: 10px;
 }
 
 .widget__header {
@@ -51,4 +54,18 @@
 .widget__articleRight > p {
   font-size: 12px;
   color: gray;
+}
+
+.widget__copyright {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.widget__copyright > a {
+  color: gray;
+}
+
+.widget__copyright > a:hover {
+  color: #0a66c2;
 }
