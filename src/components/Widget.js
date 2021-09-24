@@ -23,7 +23,7 @@ function Widget() {
           <h2>LinkedIn News</h2>
           <Info />
         </div>
-        {news("Apple is back", "Top news - 9574 readers")}
+        {news("Apple is back with its new iPhone 13 lineup", "Top news - 9574 readers")}
         {news("Covid India updates", "Top news - 645 readers")}
         {news("India vaccinates 25 million people in a single day", "Top news - 13470 readers")}
         {news("Tesla hits new high", "Cars & auto - 365 readers")}
