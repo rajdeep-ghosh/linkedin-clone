@@ -1,11 +1,12 @@
 import "../styles/Post.css";
+import { forwardRef } from "react";
 import { Avatar } from "@material-ui/core";
 import { ChatOutlined, SendOutlined, ShareOutlined, ThumbUpAltOutlined } from "@material-ui/icons";
 import FeedInputOption from "./FeedInputOption";
 
-function Post({ name, desc, caption, dpURL }) {
+const Post = forwardRef(({ name, desc, caption, dpURL }, ref) => {
   return (
-    <div className="post">
+    <div ref={ref} className="post">
       <div className="post__header">
         <Avatar src={dpURL}>{name[0]}</Avatar>
         <div className="post__details">
@@ -24,6 +25,6 @@ function Post({ name, desc, caption, dpURL }) {
       </div>
     </div>
   );
-}
+})
 
 export default Post;
