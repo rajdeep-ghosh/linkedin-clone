@@ -1,10 +1,20 @@
 import "../styles/Header.css";
+import { useDispatch } from "react-redux";
+import { logout } from "../features/userSlice";
+import { auth } from "../services/firebase";
 import HeaderOption from "./HeaderOption";
 import LinkedinLogo from "../images/linkedin-logo.png";
-import { BusinessCenter, Chat, GridOnRounded, Home, Notifications, Search, SupervisorAccount } from "@material-ui/icons";
+import { BusinessCenter, Chat, Home, Notifications, Search, SupervisorAccount } from "@material-ui/icons";
 import avatardemo from "../images/avatar-demo.png";
 
 function Header() {
+  const dispatch = useDispatch();
+
+  function logoutOfApp() {
+    dispatch(logout());
+    auth.signOut();
+  }
+
   return (
     <header className="header">
       <div className="header__left">
@@ -22,8 +32,7 @@ function Header() {
         <HeaderOption title="Jobs" Icon={BusinessCenter} />
         <HeaderOption title="Me" avatar={avatardemo} />
         <div className="header__divider"></div>
-        <HeaderOption title="Work" Icon={GridOnRounded} />
-        <button className="header__logoutBtn">Log out</button>
+        <button onClick={logoutOfApp} className="header__logoutBtn">Log out</button>
       </div>
     </header>
   );

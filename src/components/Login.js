@@ -13,6 +13,10 @@ function Login() {
   const [dp, setDp] = useState("");
 
   function register() {
+    if(!name) {
+      return alert("Enter Name to register");
+    }
+
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((userAuth) => {
@@ -37,7 +41,25 @@ function Login() {
       });
   }
 
-  function loginToApp() {}
+  function loginToApp(e) {
+    e.preventDefault();
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        dispatch(
+          login({
+            email: userAuth.user.email,
+            uid: userAuth.user.uid,
+            displayName: userAuth.user.displayName,
+            dpURL: userAuth.user.photoURL,
+          })
+        );
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }
 
   return (
     <div className="login">
@@ -59,7 +81,6 @@ function Login() {
               value={name}
               type="text"
               placeholder="Full Name"
-              required
             />
             <input
               onChange={(e) => {
