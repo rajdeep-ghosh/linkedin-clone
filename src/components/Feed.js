@@ -11,8 +11,11 @@ import {
 import FeedInputOption from "./FeedInputOption";
 import Post from "./Post";
 import { db } from "../services/firebase";
+import { selectUser } from "../features/userSlice";
+import { useSelector } from "react-redux";
 
 function Feed() {
+  const user = useSelector(selectUser)
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
@@ -31,10 +34,10 @@ function Feed() {
     e.preventDefault();
 
     db.collection("posts").add({
-      name: "Rajdeep Ghosh",
-      desc: "SDE III @ Google",
+      name: user.displayName,
+      desc: user.email,
       caption: input,
-      dpURL: "",
+      dpURL: user.dpURL || "",
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
 

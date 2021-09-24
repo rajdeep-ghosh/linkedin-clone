@@ -7,7 +7,7 @@ function Post({ name, desc, caption, dpURL }) {
   return (
     <div className="post">
       <div className="post__header">
-        <Avatar />
+        <Avatar src={dpURL}>{name[0]}</Avatar>
         <div className="post__details">
           <h2>{name}</h2>
           <p>{desc}</p>

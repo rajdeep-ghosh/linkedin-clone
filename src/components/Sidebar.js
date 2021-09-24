@@ -1,8 +1,11 @@
 import "../styles/Sidebar.css";
 import { Avatar } from "@material-ui/core";
-import Animal from "react-animals";
+import { selectUser } from "../features/userSlice";
+import { useSelector } from "react-redux";
 
 function Sidebar() {
+  const user = useSelector(selectUser);
+
   function recentItem(topic) {
     return (
       <div className="sidebar__recentItem">
@@ -19,11 +22,11 @@ function Sidebar() {
           src="https://images.unsplash.com/photo-1627844642677-8b30cb8fc636?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
           alt="sidebar-profile-card-bg-img"
         />
-        <Avatar className="sidebar__avatar">
-          <Animal size="40px" />
+        <Avatar src={user.dpURL} className="sidebar__avatar">
+          {user.displayName[0]}
         </Avatar>
-        <h2>Rajdeep Ghosh</h2>
-        <h4>rajdeepghosh@gmail.com</h4>
+        <h2>{user.displayName}</h2>
+        <h4>{user.email}</h4>
       </div>
 
       <div className="sidebar__stats">

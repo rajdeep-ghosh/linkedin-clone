@@ -5,7 +5,7 @@ import { auth } from "../services/firebase";
 import HeaderOption from "./HeaderOption";
 import LinkedinLogo from "../images/linkedin-logo.png";
 import { BusinessCenter, Chat, Home, Notifications, Search, SupervisorAccount } from "@material-ui/icons";
-import avatardemo from "../images/avatar-demo.png";
+// import avatardemo from "../images/avatar-demo.png";
 
 function Header() {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ function Header() {
         <HeaderOption title="Messaging" Icon={Chat} />
         <HeaderOption title="Notifications" Icon={Notifications} />
         <HeaderOption title="Jobs" Icon={BusinessCenter} />
-        <HeaderOption title="Me" avatar={avatardemo} />
+        <HeaderOption title="Me" avatar={true} />
         <div className="header__divider"></div>
         <button onClick={logoutOfApp} className="header__logoutBtn">Log out</button>
       </div>
