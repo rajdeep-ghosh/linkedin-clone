@@ -25,7 +25,7 @@
 }
 
 .img-m {
-  visibility: hidden;
+  display: none;
 }
 
 .login__title {
@@ -90,11 +90,11 @@
   }
 
   .img-d {
-    visibility: hidden;
+    display: none;
   }
 
   .img-m {
-    visibility: visible;
+    display: block;
   }
 }
 
